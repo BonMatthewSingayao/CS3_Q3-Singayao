@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>
+            Coding Challenge 6 : SINGAYAO - Lithium
+        </title>
+		
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+           
+        </style>
+		
+    </head>
+	
+    <body>
+	
+        <h1> Quadratic Formula </h1>
+
+        <button onclick="quadratic()">Find the root</button>
+
+        <h4 id="result"></h4>
+
+        <script>
+		
+		function quadratic() {
+		var a = prompt('Please Input Your A');
+		var b = prompt('Please Input Your B');
+		var c = prompt('Please Input Your C');
+		
+		var discriminant = (b*b) - (4*(a*c));
+		
+		if (discriminant==0) {
+		var quadraticEquation=(-1 * b)/2*a;
+		document.getElementById("result").innerHTML="the x1 and x2 are both "+quadraticEquation;
+		}
+		
+		else if (discriminant>0) {
+		var positiveQuadraticEquation = ((-1 * b) + ( Math.sqrt(discriminant)))/2*a;
+		var negativeQuadraticEquation = ((-1 * b) - ( Math.sqrt(discriminant)))/2*a;
+		
+		document.getElementById("result").innerHTML="the x1 is "+positiveQuadraticEquation+" and the x2 is "+negativeQuadraticEquation;
+		}
+		
+		else if (discriminant<0) {
+		document.getElementById("result").innerHTML="the x1 and x2 are both imaginary";
+		}
+	}
+			
+        </script>
+		
+    </body>
+	
+</html>
