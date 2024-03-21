@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+	
+        <title>
+            Coding Challenge 5 : SINGAYAO - Lithium
+        </title>
+		
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+           
+        </style>
+		
+    </head>
+	
+    <body>
+	
+        <h1> Modified FLAMES </h1>
+
+        <button onclick="Flames()">Match Names</button>
+        <h3 id="name"></h3>
+
+        <h4>FLAMES Result:</h4>
+        <h3 id="result"></h3>
+
+
+        <script>
+            function Flames(){
+            var name1 = prompt("Please Input the first Name");
+			var name2 = prompt("Please Input the second Name");
+            document.getElementById("name").innerHTML=" "+name1+" and "+name2;
+			
+			var newname1 = name1.replace(/[^a-zA-Z0123456789]/g, "");
+			var newname2 = name2.replace(/[^a-zA-Z0123456789]/g, "");
+			
+			var count1 = newname1.length;
+			var count2 = newname2.length;
+			var totalcount=count1+count2;
+			
+			var flames1=totalcount%6;
+			
+			if(flames1==1) {
+			document.getElementById("result").innerHTML="Friends";
+			} 
+			
+			else if(flames1==2) {
+			document.getElementById("result").innerHTML="Lovers";
+			} 
+			
+			else if(flames1==3) {
+			document.getElementById("result").innerHTML="Acquaintances";
+			} 
+			
+			else if(flames1==4) {
+			document.getElementById("result").innerHTML="Marriage";
+			} 
+			
+			else if(flames1==5) {
+			document.getElementById("result").innerHTML="Enemies";
+			} 
+			
+			else {
+			document.getElementById("result").innerHTML="Sweethearts";
+			}
+			
+            }
+        </script>
+		
+    </body>
+	
+</html>
